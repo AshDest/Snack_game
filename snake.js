@@ -1,3 +1,33 @@
+class Snake{
+    constructor(x, y, size){
+        this.x = x
+        this.y = y
+        this.size = size
+        this.tail = [{x:this.x, y:this.y}]
+        this.rotateX = x
+        this.rotateY = y
+    }
+    move(){
+        var newRect;
+        if (this.rotateX == 1) {
+            newRect = {
+                x: this.tail[this.tail.length - 1].x + this.size,
+                y: this.tail[this.tail.length - 1].y
+            }
+        } else if (this.rotateX == 1) {
+            newRect = {
+                x: this.tail[this.tail.length - 1].x + this.size,
+                y: this.tail[this.tail.length - 1].y
+            }
+        } else if (this.rotateX == 1) {
+            newRect = {
+                x: this.tail[this.tail.length - 1].x + this.size,
+                y: this.tail[this.tail.length - 1].y
+            }
+        }
+    }
+}
+
 
 
 var canvas = document.getElementById("canvas")
@@ -16,5 +46,5 @@ function gameLoop(){
 
 function show(){
     update();
-    
+    draw();
 }
