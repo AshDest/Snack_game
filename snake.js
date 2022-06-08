@@ -30,9 +30,22 @@ class Snake{
                 y: this.tail[this.tail.length - 1].y - this.size
             }
         }
+
+        this.tail.shift()
+        this.tail.push(newRect)
+
     }
 }
 
+class Apple{
+    constructor(){
+        var isTouching;
+        while (true) {
+            isTouching = false;
+            this.x = Math.floor(Math.random())
+        }
+    }
+}
 
 
 var canvas = document.getElementById("canvas")
