@@ -14,15 +14,20 @@ class Snake{
                 x: this.tail[this.tail.length - 1].x + this.size,
                 y: this.tail[this.tail.length - 1].y
             }
-        } else if (this.rotateX == 1) {
+        } else if (this.rotateX == -1) {
             newRect = {
-                x: this.tail[this.tail.length - 1].x + this.size,
+                x: this.tail[this.tail.length - 1].x - this.size,
                 y: this.tail[this.tail.length - 1].y
             }
-        } else if (this.rotateX == 1) {
+        } else if (this.rotateY == 1) {
             newRect = {
-                x: this.tail[this.tail.length - 1].x + this.size,
-                y: this.tail[this.tail.length - 1].y
+                x: this.tail[this.tail.length - 1].x,
+                y: this.tail[this.tail.length - 1].y + this.size
+            }
+        }  else if (this.rotateY == -1) {
+            newRect = {
+                x: this.tail[this.tail.length - 1].x,
+                y: this.tail[this.tail.length - 1].y - this.size
             }
         }
     }
